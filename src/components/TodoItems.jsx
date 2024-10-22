@@ -21,10 +21,10 @@ const TodoItems = ({task,isChecked,id,setTask,tasks,addNotify,deleteNotify}) => 
     }
 
   return (
-    <div className='flex justify-between items-center px-2'>
+    <div className='flex justify-between items-center px-2 gap-2'>
         <div 
         onClick={()=>{isCheckedOrNot(id)}}
-        className='flex items-center gap-3 mr-3 cursor-pointer'>
+        className='flex items-center gap-3 cursor-pointer'>
             <img className='w-6' src={isChecked?tick:not_tick} alt="" />
             <p className={`${isChecked?"line-through":""} font-semibold`}>{task}</p>
         </div>

@@ -32,7 +32,7 @@ const Todos = () => {
     },[task])
 
   return (
-    <div className='bg-white min-h-[300px] p-5 pt-12 rounded-3xl flex flex-col gap-7'>
+    <div className='bg-white min-h-[300px] p-5 pt-12 rounded-3xl flex flex-col gap-7 max-sm:w-full max-sm:m-7 '>
         <ToastContainer position='top-right' />
         <div className='flex items-center gap-3'>
             <img 
@@ -41,10 +41,10 @@ const Todos = () => {
             <h2 className='text-3xl font-semibold'>To-Do List</h2>
         </div>
 
-        <div className='w-[400px] h-[60px] flex items-center gap-2 bg-gray-200 rounded-full'>
+        <div className='w-[400px] max-sm:w-full h-[60px] flex items-center gap-2 bg-gray-200 rounded-full'>
             <input 
             ref={inputRef}
-            className='bg-transparent outline-none border-none h-full w-full px-5 text-[18px] placeholder:text-slate-500'
+            className='bg-transparent max-sm:pr-0 outline-none border-none h-full w-full px-5 text-[18px] placeholder:text-slate-500'
             type="text" placeholder='Add New Tasks....' />
             <button 
             onClick={()=>{taskAdd()}}
